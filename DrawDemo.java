@@ -12,7 +12,6 @@ import java.util.Random;
 public class DrawDemo
 {
     private Canvas myCanvas;
-    private Random random;
 
     /**
      * Prepare the drawing demo. Create a fresh canvas and make it visible.
@@ -21,7 +20,6 @@ public class DrawDemo
     {
         myCanvas = new Canvas("Drawing Demo", 500, 400);  
         myCanvas.erase();
-        random = new Random();
     }
 
     /**
@@ -65,6 +63,7 @@ public class DrawDemo
      */
     public void colorScribble()
     {
+        Random random = new Random();
         Pen pen = new Pen(250, 200, myCanvas);
 
         for (int i=0; i<10; i++) {
