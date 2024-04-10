@@ -96,6 +96,15 @@ public class DrawDemo
             pen.turn(360/5);
         }
     }
+     public void drawPolygon(int n, int xPos,int yPos) {
+        Pen pen = new Pen(xPos,yPos , myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for (int i = 0; i < n; i++) {
+            pen.move(100);
+            pen.turn(360/n);
+        }
+    }
 
     /**
      * Clear the screen.
