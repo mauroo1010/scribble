@@ -87,6 +87,15 @@ public class DrawDemo
             pen.turn(360/3);
         }
     }
+    public void drawPentagon(int xPos,int yPos) {
+        Pen pen = new Pen(xPos,yPos , myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for (int i = 0; i < 5; i++) {
+            pen.move(100);
+            pen.turn(360/5);
+        }
+    }
 
     /**
      * Clear the screen.
