@@ -105,6 +105,16 @@ public class DrawDemo
             pen.turn(360/n);
         }
     }
+     public void drawSpiral() {
+        Pen pen = new Pen(150,100, myCanvas);
+        pen.setColor(Color.BLACK);
+        int i = 300;
+        while (i > 20){
+            pen.move(i);
+            pen.turn(90);
+            i = i - 5;
+        }
+    }
 
     /**
      * Clear the screen.
