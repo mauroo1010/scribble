@@ -12,7 +12,7 @@ import java.util.Random;
 public class DrawDemo
 {
     private Canvas myCanvas;
-
+    private Random random;
     /**
      * Prepare the drawing demo. Create a fresh canvas and make it visible.
      */
@@ -72,11 +72,22 @@ public class DrawDemo
             int green = random.nextInt(256);
             int blue = random.nextInt(256);
             pen.setColor(new Color(red, green, blue));
-            
+
             pen.randomSquiggle();
         }
+
     }
-    
+
+    public void drawTriangle(int xPos, int yPos) {
+        Pen pen = new Pen(xPos, yPos, myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for (int i = 0; i < 3; i++) {
+            pen.move(200);
+            pen.turn(360/3);
+        }
+    }
+
     /**
      * Clear the screen.
      */
