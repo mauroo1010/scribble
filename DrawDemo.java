@@ -108,11 +108,12 @@ public class DrawDemo
         }
     }
 
-    public void drawSpiral(boolean condicion) {
+    public void drawSpiral(boolean condicion, int lineas, int x, int y) {
         Pen pen = new Pen(250, 200, myCanvas);
         Random generador = new Random();
         int i = 0;
-        while (i < 300) {
+        int lineasDibujadas = 0;
+        while (lineasDibujadas < lineas ) {
             if (condicion == true) {
                 pen.setColor(new Color (generador.nextInt(250), generador.nextInt(250), generador.nextInt(250)));
             }
@@ -123,6 +124,7 @@ public class DrawDemo
             pen.move(i);
             pen.turn(90);
             i += 4;
+            lineasDibujadas++;
         }
 
     }
