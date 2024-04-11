@@ -87,16 +87,18 @@ public class DrawDemo
             pen.turn(360/3);
         }
     }
+
     public void drawPentagon(int xPos,int yPos) {
         Pen pen = new Pen(xPos,yPos , myCanvas);
         pen.setColor(Color.GREEN);
-        
+
         for (int i = 0; i < 5; i++) {
             pen.move(100);
             pen.turn(360/5);
         }
     }
-     public void drawPolygon(int n, int xPos,int yPos) {
+
+    public void drawPolygon(int n, int xPos,int yPos) {
         Pen pen = new Pen(xPos,yPos , myCanvas);
         pen.setColor(Color.GREEN);
 
@@ -105,16 +107,20 @@ public class DrawDemo
             pen.turn(360/n);
         }
     }
-     public void drawSpiral() {
-        Pen pen = new Pen(150,100, myCanvas);
+
+    public void drawSpiral() {
+        Pen pen = new Pen(250, 200, myCanvas);
         pen.setColor(Color.BLACK);
-        int i = 300;
-        while (i > 20){
+        
+        int i = 0;
+        while (i < 300) {
             pen.move(i);
             pen.turn(90);
-            i = i - 5;
+            i += 5;
         }
+
     }
+
 
     /**
      * Clear the screen.
@@ -123,4 +129,5 @@ public class DrawDemo
     {
         myCanvas.erase();
     }
+
 }
