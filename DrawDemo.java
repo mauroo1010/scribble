@@ -110,13 +110,13 @@ public class DrawDemo
 
     public void drawSpiral() {
         Pen pen = new Pen(250, 200, myCanvas);
-        pen.setColor(Color.BLACK);
-        
+        Random generador = new Random();
         int i = 0;
         while (i < 300) {
+            pen.setColor(new Color (generador.nextInt(250), generador.nextInt(250), generador.nextInt(250)));
             pen.move(i);
             pen.turn(90);
-            i += 5;
+            i += 4;
         }
 
     }
